@@ -61,27 +61,6 @@ document.querySelectorAll('.price-card, .test-card, .shop-card, .blog-card, .mis
     observer.observe(card);
 });
 
-// Mobile menu toggle (if needed for smaller screens)
-function setupMobileMenu() {
-    const navMenu = document.querySelector('.nav-menu');
-    const navbar = document.querySelector('.navbar');
-    
-    // Create menu toggle button
-    if (window.innerWidth <= 768) {
-        const toggleBtn = document.createElement('button');
-        toggleBtn.className = 'menu-toggle';
-        toggleBtn.innerHTML = '☰';
-        toggleBtn.style.cssText = 'background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;';
-        
-        if (navMenu && !document.querySelector('.menu-toggle')) {
-            navbar.querySelector('.container').appendChild(toggleBtn);
-        }
-    }
-}
-
-// Initialize on page load
-window.addEventListener('load', setupMobileMenu);
-
 // Add active link highlighting in navigation
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id]');
